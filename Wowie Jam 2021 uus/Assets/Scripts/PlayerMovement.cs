@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float waitTime;
     float waitTimer;
 
+    public LayerMask interactable;
 
     // Update is called once per frame
     void Update()
@@ -37,21 +38,23 @@ public class PlayerMovement : MonoBehaviour
         waitTimer = waitTime;
         if(x)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.right, 100);        // If it hits something...
-            if (hit.collider == null || !hit.transform.CompareTag("Wall"))
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.right, 1 , interactable);
+            
+            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
             {
-                Debug.Log("HEi");
-                Debug.DrawRay(transform.position, dir * Vector2.right, Color.red, 1);
+                Debug.Log("HEi");           
                 transform.position += new Vector3(dir * tileLength, 0, 0);
             }
-            else
-            {
-                Debug.Log("MOI");
-            }
+
         }
         else
         {
-            transform.position += new Vector3(0, dir*tileLength, 0);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.up, 1, interactable);
+            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
+            {
+                Debug.Log("HEi");
+                transform.position += new Vector3(0, dir * tileLength, 0);
+            }
         }
     }
     void TileTimer()
