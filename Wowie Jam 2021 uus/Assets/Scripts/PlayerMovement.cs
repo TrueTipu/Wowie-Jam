@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     bool movable = true;
-    public float tileLength;
+    float tileLength = 1;
 
     public float waitTime;
     float waitTimer;
 
+    public LayerMask interactable;
 
     // Update is called once per frame
     void Update()
@@ -37,11 +38,23 @@ public class PlayerMovement : MonoBehaviour
         waitTimer = waitTime;
         if(x)
         {
-            transform.position += new Vector3(dir*tileLength, 0, 0);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.right, 1 , interactable);
+            
+            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
+            {
+                Debug.Log("HEi");           
+                transform.position += new Vector3(dir * tileLength, 0, 0);
+            }
+
         }
         else
         {
-            transform.position += new Vector3(0, dir*tileLength, 0);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.up, 1, interactable);
+            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
+            {
+                Debug.Log("HEi");
+                transform.position += new Vector3(0, dir * tileLength, 0);
+            }
         }
     }
     void TileTimer()
