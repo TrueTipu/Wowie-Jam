@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     bool movable = true;
-    public float tileLength;
+    float tileLength = 1;
 
     public float waitTime;
     float waitTimer;
@@ -37,7 +37,17 @@ public class PlayerMovement : MonoBehaviour
         waitTimer = waitTime;
         if(x)
         {
-            transform.position += new Vector3(dir*tileLength, 0, 0);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.right, 100);        // If it hits something...
+            if (hit.collider == null || !hit.transform.CompareTag("Wall"))
+            {
+                Debug.Log("HEi");
+                Debug.DrawRay(transform.position, dir * Vector2.right, Color.red, 1);
+                transform.position += new Vector3(dir * tileLength, 0, 0);
+            }
+            else
+            {
+                Debug.Log("MOI");
+            }
         }
         else
         {
