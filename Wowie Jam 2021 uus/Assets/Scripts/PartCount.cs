@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PartCount : MonoBehaviour
+[System.Serializable]
+public class PartCount
 {
-    public PlayerMovement[] parts;
-    
+    public Transform[] parts;
 }

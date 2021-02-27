@@ -13,6 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask interactable;
 
     public int serialNumber;
+
+    [SerializeField]
+
+    public PartCount partCount;
     // Update is called once per frame
     void Update()
     {
@@ -39,9 +43,38 @@ public class PlayerMovement : MonoBehaviour
         waitTimer = waitTime;
         if(x)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.right, 1 , interactable);
-            
-            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
+            RaycastHit2D hit;
+            RaycastHit2D hit2;
+            RaycastHit2D hit3;
+            if (partCount.parts[0].parent != null)
+            {
+                Debug.Log("1");
+                hit = Physics2D.Raycast((transform.position + new Vector3(0, 1, 0)), dir * Vector2.right, 1, interactable);
+            }
+            else
+            {
+                hit = new RaycastHit2D();
+            }
+            if (partCount.parts[1].parent != null)
+            {
+                Debug.Log("2");
+                hit2 = Physics2D.Raycast((transform.position + new Vector3(0, 0, 0)), dir * Vector2.right, 1, interactable);
+            }
+            else
+            {
+                hit2 = new RaycastHit2D();
+            }
+            if (partCount.parts[2].parent != null)
+            {
+                Debug.Log("3");
+                hit3 = Physics2D.Raycast((transform.position + new Vector3(0, -1, 0)), dir * Vector2.right, 1, interactable);
+            }
+            else
+            {
+                hit3 = new RaycastHit2D();
+            }
+
+            if ((hit.collider == null) && (hit2.collider == null) && (hit3.collider == null) )
             {
                 Debug.Log("HEi");           
                 transform.position += new Vector3(dir * tileLength, 0, 0);
@@ -50,8 +83,38 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.up, 1.5f, interactable);
-            if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
+            RaycastHit2D hit;
+            RaycastHit2D hit2;
+            RaycastHit2D hit3;
+            if (partCount.parts[0].parent != null)
+            {
+                Debug.Log("1");
+                hit = Physics2D.Raycast((transform.position + new Vector3(0, 1, 0)), dir * Vector2.up, 1, interactable);
+            }
+            else
+            {
+                hit = new RaycastHit2D();
+            }
+            if (partCount.parts[1].parent != null)
+            {
+                Debug.Log("2");
+                hit2 = Physics2D.Raycast((transform.position + new Vector3(0, 0, 0)), dir * Vector2.up, 1, interactable);
+            }
+            else
+            {
+                hit2 = new RaycastHit2D();
+            }
+            if (partCount.parts[2].parent != null)
+            {
+                Debug.Log("3");
+                hit3 = Physics2D.Raycast((transform.position + new Vector3(0, -1, 0)), dir * Vector2.up, 1, interactable);
+            }
+            else
+            {
+                hit3 = new RaycastHit2D();
+            }
+            
+            if ((hit.collider == null) && (hit2.collider == null) && (hit3.collider == null))
             {
                 Debug.Log("HEi");
                 transform.position += new Vector3(0, dir * tileLength, 0);
