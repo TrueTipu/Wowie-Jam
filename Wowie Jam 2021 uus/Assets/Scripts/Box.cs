@@ -15,7 +15,7 @@ public class Box : MonoBehaviour
         {
             Debug.Log("2");
             player = other.transform.parent;
-            if (player.GetComponent<PlayerMovement>().currentParts < 1)
+            if (player.GetComponent<PlayerMovement>().currentParts > 1)
             {
 
 
@@ -45,6 +45,10 @@ public class Box : MonoBehaviour
                 }
 
                 transform.position += new Vector3(dir * x, dir * y, 0);
+            }
+            else
+            {
+                player.position = player.GetComponent<PlayerMovement>().oldPos;
             }
         }
     }
