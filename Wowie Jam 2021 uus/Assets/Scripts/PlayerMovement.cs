@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
 
     public PartCount partCount;
-    int currentParts;
+    public int currentParts;
 
     public Vector3 oldPos;
 

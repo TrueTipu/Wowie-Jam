@@ -15,32 +15,37 @@ public class Box : MonoBehaviour
         {
             Debug.Log("2");
             player = other.transform.parent;
-            if ((player.GetComponent<PlayerMovement>().oldPos.y - player.transform.position.y) < 0)
+            if (player.GetComponent<PlayerMovement>().currentParts < 1)
             {
-                dir = 1;
-                y = 1;
-                x = 0;
-            }
-            else if ((player.GetComponent<PlayerMovement>().oldPos.y - player.transform.position.y) > 0)
-            {
-                dir = -1;
-                y = 1;
-                x = 0;
-            }
-            else if ((player.GetComponent<PlayerMovement>().oldPos.x - player.transform.position.x) < 0)
-            {
-                dir = 1;
-                y = 0;
-                x = 1;
-            }
-            else if ((player.GetComponent<PlayerMovement>().oldPos.x - player.transform.position.x) > 0)
-            {
-                dir = -1;
-                y = 0;
-                x = 1;
-            }
 
-            transform.position += new Vector3(dir * x, dir * y, 0);
+
+                if ((player.GetComponent<PlayerMovement>().oldPos.y - player.transform.position.y) < 0)
+                {
+                    dir = 1;
+                    y = 1;
+                    x = 0;
+                }
+                else if ((player.GetComponent<PlayerMovement>().oldPos.y - player.transform.position.y) > 0)
+                {
+                    dir = -1;
+                    y = 1;
+                    x = 0;
+                }
+                else if ((player.GetComponent<PlayerMovement>().oldPos.x - player.transform.position.x) < 0)
+                {
+                    dir = 1;
+                    y = 0;
+                    x = 1;
+                }
+                else if ((player.GetComponent<PlayerMovement>().oldPos.x - player.transform.position.x) > 0)
+                {
+                    dir = -1;
+                    y = 0;
+                    x = 1;
+                }
+
+                transform.position += new Vector3(dir * x, dir * y, 0);
+            }
         }
     }
 }
