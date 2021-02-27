@@ -228,6 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9013887630698048052}
   - component: {fileID: 9013887630698048055}
+  - component: {fileID: 4241817640283123883}
   m_Layer: 0
   m_Name: Hahmokokonaisuus 1
   m_TagString: Untagged
@@ -274,6 +275,18 @@ MonoBehaviour:
     - {fileID: 9013887629773787145}
     - {fileID: 9013887629830338522}
     - {fileID: 9013887630904579574}
+--- !u!114 &4241817640283123883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013887630698048054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d349bea938cf1e46b0212924423eec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9013887630904579579
 GameObject:
   m_ObjectHideFlags: 0
