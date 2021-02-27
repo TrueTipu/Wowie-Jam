@@ -10,6 +10,7 @@ public class SpikeBush : MonoBehaviour
         Debug.Log("1");
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("Kaktus");
             Debug.Log("2");
             player = other.transform.GetComponent<Transform>();
             player.SetParent(null);
