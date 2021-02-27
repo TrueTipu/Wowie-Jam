@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
 
     public PartCount partCount;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -35,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         {
             TileTimer();
         }
+        CheckWin();
     }
 
     void Move(float dir, bool x)
@@ -119,6 +123,13 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("HEi");
                 transform.position += new Vector3(0, dir * tileLength, 0);
             }
+        }
+    }
+    void CheckWin()
+    {
+        if(partCount.parts[0].parent == null && partCount.parts[1].parent == null && partCount.parts[2].parent == null)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
     void TileTimer()
