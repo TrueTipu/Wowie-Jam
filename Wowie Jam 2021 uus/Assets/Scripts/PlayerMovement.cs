@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask interactable;
 
+    public int serialNumber;
     // Update is called once per frame
     void Update()
     {
@@ -49,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.up, 1, interactable);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, dir * Vector2.up, 1.5f, interactable);
             if ((hit.collider == null) /*|| (hit.transform.tag != "Wall")*/)
             {
                 Debug.Log("HEi");
