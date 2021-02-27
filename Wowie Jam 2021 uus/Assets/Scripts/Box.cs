@@ -15,7 +15,11 @@ public class Box : MonoBehaviour
         {
             Debug.Log("2");
             player = other.transform.parent;
-            if (player.GetComponent<PlayerMovement>().currentParts > 1)
+            if (player == null)
+            {
+                Debug.Log("Joo");
+            }
+            else if (player.GetComponent<PlayerMovement>().currentParts > 1)
             {
 
 
