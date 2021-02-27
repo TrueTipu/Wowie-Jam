@@ -18,11 +18,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
 
     public PartCount partCount;
-
+    int currentParts;
 
     // Update is called once per frame
     void Update()
     {
+        currentParts = CountParts(partCount);
         if(movable)
         {
             if(Input.GetAxisRaw("Horizontal") != 0 )
@@ -125,9 +126,27 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    int CountParts(PartCount partsToCount)
+    {
+        int storage = 0;
+        if (partCount.parts[0].parent != null)
+        {
+            storage += 1;
+        }
+        if (partCount.parts[1].parent != null)
+        {
+            storage += 1;
+        }
+        if (partCount.parts[2].parent != null)
+        {
+            storage += 1;
+        }
+        return storage;
+    }
     void CheckWin()
     {
-        if(partCount.parts[0].parent == null && partCount.parts[1].parent == null && partCount.parts[2].parent == null)
+        if(currentParts == 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
