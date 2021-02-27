@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
             if ((hit.collider == null) && (hit2.collider == null) && (hit3.collider == null) )
             {
+                FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("Kävely");
                 Debug.Log("HEi");           
                 transform.position += new Vector3(dir * tileLength, 0, 0);
             }
@@ -124,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
             
             if ((hit.collider == null) && (hit2.collider == null) && (hit3.collider == null))
             {
+                FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("Kävely");
                 Debug.Log("HEi");
                 transform.position += new Vector3(0, dir * tileLength, 0);
             }
