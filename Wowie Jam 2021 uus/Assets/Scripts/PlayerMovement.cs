@@ -20,12 +20,15 @@ public class PlayerMovement : MonoBehaviour
     public PartCount partCount;
     int currentParts;
 
+    public Vector3 oldPos;
+
     // Update is called once per frame
     void Update()
     {
         currentParts = CountParts(partCount);
         if(movable)
         {
+            oldPos = transform.position;
             if(Input.GetAxisRaw("Horizontal") != 0 )
             {
                 Move(Mathf.Round(Input.GetAxisRaw("Horizontal")), true);
