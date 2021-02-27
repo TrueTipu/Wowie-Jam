@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
 {
     private void Start()
     {
-
+        FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("Musa");
     }
     public void PlayGame()
     {
