@@ -136,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 9013887629830338527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.56636095, y: 0.56636095, z: 0.62929}
+  m_LocalScale: {x: 0.566361, y: 0.56636095, z: 0.62929}
   m_Children: []
   m_Father: {fileID: 9013887630698048052}
   m_RootOrder: 1
@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 9013887630698048052}
   - component: {fileID: 9013887630698048055}
   - component: {fileID: 4241817640283123883}
+  - component: {fileID: 1155776008}
   m_Layer: 0
   m_Name: Hahmokokonaisuus 1
   m_TagString: Untagged
@@ -287,6 +288,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d349bea938cf1e46b0212924423eec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1155776008
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9013887630698048054}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bee2de2c66d86cd4b8b72d275443cea0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9013887630904579579
 GameObject:
   m_ObjectHideFlags: 0
