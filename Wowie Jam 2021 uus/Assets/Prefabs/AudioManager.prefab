@@ -53,13 +53,13 @@ MonoBehaviour:
   - name: "K\xE4vely"
     clip: {fileID: 8300000, guid: 5d347d699f01c9c40ac5e5bb28500332, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.1
     pitch: 1
     source: {fileID: 0}
   - name: Kaktus
     clip: {fileID: 8300000, guid: 0d0f1cc07beb1284caa55c06558bf95a, type: 3}
     loop: 0
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - name: Teleport
