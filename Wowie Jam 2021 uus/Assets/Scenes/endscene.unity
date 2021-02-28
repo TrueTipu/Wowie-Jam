@@ -259,7 +259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 431, y: -166.79}
+  m_AnchoredPosition: {x: 331, y: -145}
   m_SizeDelta: {x: 373, y: 386.41177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &266582742
@@ -282,9 +282,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Monni- Art, level design
+  m_text: 'Credits:
 
-    Tipu- Code'
+    Monni- Art, level design, music
+
+    Tipu- Programming,
+    game desing
+
+    Jokuihanvaan- nothing'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -347,7 +352,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -121.819824, w: 0}
+  m_margin: {x: -48.263794, y: 0, z: -121.819824, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -461,7 +466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -83, y: -81}
+  m_AnchoredPosition: {x: -127, y: -81}
   m_SizeDelta: {x: 678.2158, y: 645.7018}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240900960
@@ -619,7 +624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -106}
+  m_AnchoredPosition: {x: -43, y: -48}
   m_SizeDelta: {x: 775.98486, y: 184.64291}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1737696756
@@ -753,8 +758,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 57, y: 25.1}
-  m_SizeDelta: {x: 1941.7698, y: 4190.56}
+  m_AnchoredPosition: {x: 57, y: -17}
+  m_SizeDelta: {x: 1941.7698, y: 1309.791}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068575454
 MonoBehaviour:
