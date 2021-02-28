@@ -276,6 +276,8 @@ MonoBehaviour:
     - {fileID: 9013887629773787145}
     - {fileID: 9013887629830338522}
     - {fileID: 9013887630904579574}
+  currentParts: 0
+  oldPos: {x: 0, y: 0, z: 0}
 --- !u!114 &4241817640283123883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +380,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 21
+  m_SortingOrder: 3
   m_Sprite: {fileID: -175307378665140231, guid: 15b97a6f1d5817142a4c3603b12bad60, type: 3}
   m_Color: {r: 1, g: 0.4764151, b: 0.4764151, a: 1}
   m_FlipX: 0
