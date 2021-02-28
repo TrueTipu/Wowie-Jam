@@ -66,5 +66,6 @@ public class Teleporter : MonoBehaviour
     void Teleporttaa(Transform target, Transform pelaaja)
     {
         player.transform.position = new Vector3(target.position.x + 1, target.position.y, target.position.z);
+        FindObjectOfType<AudioManager>().GetComponent<AudioManager>().Play("Teleport");
     }
 }
