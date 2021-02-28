@@ -640,7 +640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME OVER :-DD
+  m_text: GAME OVER (the end)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bbcdb7b0d7b9fdb4aba340dc7f61962a, type: 2}
   m_sharedMaterial: {fileID: -9048620432288085713, guid: bbcdb7b0d7b9fdb4aba340dc7f61962a, type: 2}
@@ -667,7 +667,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 93.5
+  m_fontSize: 95.65
   m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -2.5040283, z: 0, w: 0}
+  m_margin: {x: -65.26544, y: -2.5040283, z: -121.2074, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
