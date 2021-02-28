@@ -282,12 +282,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Credits:
+  m_text: 'Thx for playing
+
+
+    Credits:
 
     Monni- Art, level design, music
 
-    Tipu- Programming,
-    game desing
+    Tipu-
+    Programming, game desing
 
     Jokuihanvaan- nothing'
   m_isRightToLeft: 0
